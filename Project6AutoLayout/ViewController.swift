@@ -47,11 +47,9 @@ class ViewController: UIViewController {
         
         let viewsDictionary = ["label1":label1, "label2":label2, "label3":label3, "label4":label4, "label5":label5]
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[label1]|", options: .allZeros, metrics: nil, views: viewsDictionary))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[label2]|", options: .allZeros, metrics: nil, views: viewsDictionary))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[label3]|", options: .allZeros, metrics: nil, views: viewsDictionary))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[label4]|", options: .allZeros, metrics: nil, views: viewsDictionary))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[label5]|", options: .allZeros, metrics: nil, views: viewsDictionary))
+        for label in viewsDictionary {
+            view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|[\(label)]|", options: .allZeros, metrics: nil, views: viewsDictionary))
+        }
     }
     
     //Don't want to show the iOS status bar on this view controller
