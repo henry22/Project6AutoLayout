@@ -77,11 +77,8 @@
 		BABC46721B08459A008708E9 /* Project6AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				BABC46751B08459A008708E9 /* AppDelegate.swift */,
 				BABC46771B08459A008708E9 /* ViewController.swift */,
 				BABC46791B08459A008708E9 /* Main.storyboard */,
-				BABC467C1B08459A008708E9 /* Images.xcassets */,
-				BABC467E1B08459A008708E9 /* LaunchScreen.xib */,
 				BABC46731B08459A008708E9 /* Supporting Files */,
 			);
 			path = Project6AutoLayout;
@@ -90,6 +87,9 @@
 		BABC46731B08459A008708E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BABC46751B08459A008708E9 /* AppDelegate.swift */,
+				BABC467C1B08459A008708E9 /* Images.xcassets */,
+				BABC467E1B08459A008708E9 /* LaunchScreen.xib */,
 				BABC46741B08459A008708E9 /* Info.plist */,
 			);
 			name = "Supporting Files";
