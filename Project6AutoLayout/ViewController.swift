@@ -47,8 +47,8 @@ class ViewController: UIViewController {
         
         let viewsDictionary = ["label1":label1, "label2":label2, "label3":label3, "label4":label4, "label5":label5]
         
-        for label in viewsDictionary {
-            view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|[\(label)]|", options: .allZeros, metrics: nil, views: viewsDictionary))
+        for label in viewsDictionary.keys {
+            view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[\(label)]|", options: .allZeros, metrics: nil, views: viewsDictionary))
         }
     }
     
