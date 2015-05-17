@@ -50,8 +50,10 @@ class ViewController: UIViewController {
         for label in viewsDictionary.keys {
             view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[\(label)]|", options: .allZeros, metrics: nil, views: viewsDictionary))
         }
-        //vertical VFL doesn't have a pipe at the end, so we're not forcing the last label to stretch all the way to the edge of our view.The - symbol, which means "space". It's 10 points by default
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label1(==88)]-[label2(==88)]-[label3(==88)]-[label4(==88)]-[label5(==88)]-(>=10)-|", options: .allZeros, metrics: nil, views: viewsDictionary))
+        
+        let metrics = ["labelHeight": 88]
+        //If vertical VFL doesn't have a pipe at the end,means we're not forcing the last label to stretch all the way to the edge of our view.The - symbol, which means "space". It's 10 points by default
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|", options: .allZeros, metrics: metrics, views: viewsDictionary))
     }
     
     //Don't want to show the iOS status bar on this view controller
